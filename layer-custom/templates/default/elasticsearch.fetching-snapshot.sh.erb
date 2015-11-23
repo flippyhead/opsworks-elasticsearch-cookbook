@@ -1,0 +1,3 @@
+#!/bin/sh
+SNAPSHOT=`date +%Y%m%d-%H%M%S`
+curl -XPUT "localhost:9200/_snapshot/<%= node.elasticsearch[:snapshots][:name] %>/$SNAPSHOT?wait_for_completion=true"
